@@ -93,3 +93,56 @@ function complexProblem(userArray, userPow) {
       .map((num) => Math.pow(num, userPow));
    return powArray;
 }
+
+// SORT AN ARRAY ALPHABETICALLY USING THE SORT METHOD\
+
+function sortArray() {
+   let userArray = ["l", "g", "a", "c", "d", "b", "f", "z", "h", "l", "a"];
+   return userArray.sort(function (a, b) {
+      // compares the values with conditional ? if the same it doesnt move it if it is less than then it gets moved forward
+      return a === b ? 0 : a < b ? -1 : 1;
+   });
+}
+
+// SPLIT A STRING INTO AN ARRAY USING THE SLIP METHOD
+
+function splitArray(userString) {
+   var stringArray = userString.split(/\W/);
+   return stringArray;
+}
+
+// COMBINE AN ARRAY INTO A STRING USING THE JOIN METHOD
+
+function joinArray(userString) {
+   // Takes the string and turns it into an array then turns it back into a string.
+   let newArray = userString.split(/\W/).join(" ");
+   return newArray;
+}
+
+// APPLY FUNCTIONAL PROGRAMMING TO CONVERT STRINGS INTO A URL SLUG
+
+function slug(userString) {
+   return userString
+      .split(/\W/)
+      .filter((obj) => {
+         return obj !== "";
+      })
+      .join("-")
+      .toLowerCase();
+}
+
+// USE THE EVERY METHOD TO CHECK THAT EVERY ELEMENT IN AN ARRAY MEETS A CRITERIA
+
+function everyArray(userArray) {
+   return userArray.every(function (isPositive) {
+      return isPositive > 0;
+   });
+}
+
+// USE THE SOME METHOD TO CHECK THAT ANY ELEMENTS IN AN ARRYA MEET A CHRITERIA
+
+function someArray(userArray) {
+   return userArray.some(function (isPositive) {
+      return isPositive > 0;
+   });
+}
